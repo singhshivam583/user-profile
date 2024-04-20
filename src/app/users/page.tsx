@@ -43,7 +43,7 @@ export default function User() {
           items={data.map((user:any) => (
             {
               title: user.name,
-              description:`Address: ${user.address.street}, ${user.address.suite}, ${user.address.city}, ${user.address.zipcode}`,
+              description:`${user.address.street}, ${user.address.suite}, ${user.address.city}, ${user.address.zipcode}`,
               link: `users/${user.id}`,
               linkData: `${user.id}`,
               email: user.email,
