@@ -58,7 +58,7 @@ function UserProfile({params}:any) {
                         {userData?.username}
                       </CardItem>
                       <CardItem
-                        as="p"
+                        as="button"
                         translateZ="60"
                         className="text-neutral-500 text-sm max-w-sm mt-4 dark:text-neutral-300"
                       >
