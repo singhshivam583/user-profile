@@ -1,4 +1,4 @@
-This is [Live](https://user-profile-assigment.vercel.app/) now vercel on vercel.
+This is [Live](https://user-profile-assigment.vercel.app/) now on vercel.
 
 ### Getting Started
 ## Frontend Developer Intern Application Project
