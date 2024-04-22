@@ -11,7 +11,7 @@ export default function User() {
   const loading = useAppSelector((state: RootState) => state.user?.loading);
   const data = useAppSelector((state: RootState) => state.user?.data);
   const error = useAppSelector((state: RootState) => state.user?.error);
-  console.log(data)
+  // console.log(data)
 
   useEffect(() => {
     dispatch(getAllUsers());
@@ -24,7 +24,7 @@ export default function User() {
           borderRadius="10rem"
           className="bg-white dark:bg-black text-black dark:text-white border-neutral-200 dark:border-slate-800"
         >
-          loading....
+          loading...
         </Button>
     </div>
   )
@@ -32,7 +32,7 @@ export default function User() {
   if(error) return <div className='min-h-screen flex items-center justify-center'>Error...</div>
   
   return (
-    <div className="min-h-screen p-12 bg-gray-600">
+    <div className="min-h-screen p-12 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mt-20">
           <h2 className="text-base text-teal-600 font-semibold tracking-wide uppercase">{loading? "Data Fetching...":"All Data Fetched Successfully"}</h2>

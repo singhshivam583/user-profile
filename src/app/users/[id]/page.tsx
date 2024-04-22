@@ -1,12 +1,13 @@
 'use client'
 import React, {useState, useEffect } from 'react';
 import Image from 'next/image';
-import { getAllUsers } from '@/store/userSlice';
+import { getAllUsers} from '@/store/userSlice';
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { useAppDispatch, useAppSelector } from '@/hooks/hooks';
 import { RootState } from '@/store/store';
 import { Button } from '@/components/ui/moving-border';
-
+import Link from 'next/link';
+import { CircleX } from 'lucide-react';
 
 function UserProfile({params}:any) {
 
@@ -18,7 +19,7 @@ function UserProfile({params}:any) {
   const error = useAppSelector((state: RootState) => state.user?.error);
   // console.log(data)
   const userData : any = data.filter(item => item.id.toString() == params.id.toString())[0];
-  console.log(userData);
+  // console.log(userData);
 
   useEffect(() => {
     dispatch(getAllUsers());
@@ -40,17 +41,20 @@ function UserProfile({params}:any) {
   
   return (
     <>
-      <div className="min-h-screen bg-gray-600 pt-36">
+      <div className="min-h-screen bg-gray-900 pt-36">
         <h1 className="text-lg md:text-5xl text-center font-sans font-bold mb-8 text-teal-600">User Profile</h1>  
         <div className="flex flex-wrap justify-center">
                 <CardContainer className="inter-var mx-4 ">
                     <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+                      <div className='flex justify-between'>
                       <CardItem
                         translateZ="50"
                         className="text-xl font-bold text-neutral-600 dark:text-white"
                       >
                         {userData?.name}
                       </CardItem>
+                      <Link href={'/'}><CircleX/></Link>
+                      </div>
                       <CardItem
                         translateZ="50"
                         className='text-xs'

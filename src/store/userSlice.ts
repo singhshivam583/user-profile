@@ -46,7 +46,7 @@ const userSlice = createSlice({
         state.loading = false;
         state.error = action.error.message || 'An error occurred.';
     });
-  },
+  }
 });
 
 export default userSlice.reducer;

@@ -21,9 +21,9 @@ export default function RootLayout({
     <html lang="en">
       <StoreProvider>
         <body className={inter.className}>
-        <div className="relative w-full flex items-center justify-center">
-          <Navbar/>
-        </div>
+          <div className="relative w-full flex items-center justify-center">
+            <Navbar/>
+          </div>
           {children}
           <div className="">
             <Footer/>
