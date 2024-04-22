@@ -91,14 +91,14 @@ function UserProfile({params}:any) {
                           as="button"
                           className="px-2 py-2 rounded-xl text-xs font-normal dark:text-white"
                         >
-                          <span className='font-bold'>contact no.→</span> {userData?.phone.split('x')[0]}
+                          <span className='font-bold'>contact no. :-</span> {userData?.phone.split('x')[0]}
                         </CardItem>
                         <CardItem
                           translateZ={20}
                           as="button"
                           className="px-2 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs"
                         >
-                          <span className='font-bold'>Visit:</span> www.{userData?.website}
+                          <span className='font-bold'>Visit →</span> www.{userData?.website}
                         </CardItem>
                       </div>
                     </CardBody>
